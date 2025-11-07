@@ -1,0 +1,173 @@
+[
+  {
+    "id": "Rectangle",
+    "level": 1,
+    "title": "Rectangle コンポーネントの機能は？",
+    "img": "assets/rectangle.png",
+    "correct": "長方形を作成（平面・幅・高さから矩形カーブ）",
+    "choices": [
+      "数値範囲から連続リストを作成",
+      "長方形を作成（平面・幅・高さから矩形カーブ）",
+      "数値を別範囲へ線形変換",
+      "ジオメトリをベクトル分だけ移動"
+    ],
+    "explain": "Rectangle は基準平面・幅・高さなどを入力し、矩形カーブ（場合によっては面生成に利用）を作ります。",
+    "apps": [
+      { "img": "apps/rectangle_01.png", "text": "プロファイルの下地作成 → Extrude でソリッド化" },
+      { "img": "apps/rectangle_02.png", "text": "Range × Series と組み合わせグリッド生成" }
+    ]
+  },
+  {
+    "id": "Range",
+    "level": 1,
+    "title": "Range コンポーネントの主用途は？",
+    "img": "assets/range.png",
+    "correct": "数値範囲から連続リストを作成",
+    "choices": [
+      "数値範囲から連続リストを作成",
+      "長方形の面積を計算",
+      "リストを昇順にソート",
+      "曲線を等分割して点を出力"
+    ],
+    "explain": "Range は開始・終了・分割数から一定間隔の数値リストを出力します（既定は 0→1 の範囲）。",
+    "apps": [
+      { "img": "apps/range_01.png", "text": "パラメトリック配列のベースとなる 0–1 正規化軸" }
+    ]
+  },
+  {
+    "id": "RemapNumbers",
+    "level": 2,
+    "title": "Remap Numbers の機能は？",
+    "img": "assets/remap_numbers.png",
+    "correct": "数値を別範囲へ線形変換",
+    "choices": [
+      "数値を別範囲へ線形変換",
+      "ジオメトリの型を変換",
+      "矩形を回転",
+      "曲線長を求める"
+    ],
+    "explain": "入力ドメイン（最小〜最大）から出力ドメインへ数値を比例変換します。",
+    "apps": [
+      { "img": "apps/remap_01.png", "text": "高さ/太さ/密度などを 0–1 から実寸スケールへ変換" }
+    ]
+  },
+  {
+    "id": "ConstructDomain",
+    "level": 2,
+    "title": "Construct Domain の用途は？",
+    "img": "assets/construct_domain.png",
+    "correct": "最小値と最大値からドメイン型を生成",
+    "choices": [
+      "最小値と最大値からドメイン型を生成",
+      "値を正規化（0〜1）",
+      "曲線の接線ベクトルを取得",
+      "ベクトルを正規化"
+    ],
+    "explain": "Min / Max を与え Domain（範囲）を作ります。Remap 等の入力に使います。",
+    "apps": [
+      { "img": "apps/domain_01.png", "text": "動的レンジ（例: 高さ 50–200mm）を UI スライダで切替" }
+    ]
+  },
+  {
+    "id": "Bounds",
+    "level": 1,
+    "title": "Bounds は何を返す？",
+    "img": "assets/bounds.png",
+    "correct": "入力リストの最小値・最大値（ドメイン）",
+    "choices": [
+      "入力リストの最小値・最大値（ドメイン）",
+      "曲線のコントロールポイント列",
+      "平面の法線ベクトル",
+      "数値の中央値"
+    ],
+    "explain": "数値リストの min/max を測り、その範囲をドメインとして返します。",
+    "apps": [
+      { "img": "apps/bounds_01.png", "text": "実測値の分布から自動スケーリングを設定" }
+    ]
+  },
+  {
+    "id": "DivideCurve",
+    "level": 2,
+    "title": "Divide Curve の機能は？",
+    "img": "assets/divide_curve.png",
+    "correct": "曲線を等分割して分割点を出力",
+    "choices": [
+      "曲線を等分割して分割点を出力",
+      "曲線を回転",
+      "面を生成",
+      "曲率プロットを生成"
+    ],
+    "explain": "指定分割数で曲線を割り、各位置のポイント（必要に応じて接線等）を得られます。",
+    "apps": [
+      { "img": "apps/divide_01.png", "text": "配列配置・骨組み生成・サンプリングに使用" }
+    ]
+  },
+  {
+    "id": "Area",
+    "level": 3,
+    "title": "Area コンポーネントの出力は？",
+    "img": "assets/area.png",
+    "correct": "面積と重心（Centroid）",
+    "choices": [
+      "面積と重心（Centroid）",
+      "曲線長",
+      "矩形の幅と高さ",
+      "法線ベクトル"
+    ],
+    "explain": "入力した平面カーブやサーフェスの面積と重心点を返します。",
+    "apps": [
+      { "img": "apps/area_01.png", "text": "重心に対して配列の基準点を合わせる" }
+    ]
+  },
+  {
+    "id": "EvaluateCurve",
+    "level": 3,
+    "title": "Evaluate Curve の役割は？",
+    "img": "assets/evaluate_curve.png",
+    "correct": "曲線上の任意位置を評価（点/接線/法線）",
+    "choices": [
+      "曲線上の任意位置を評価（点/接線/法線）",
+      "曲線を閉じる",
+      "曲線を分割",
+      "曲線を押し出す"
+    ],
+    "explain": "パラメータ（t値）で曲線上の点・接線ベクトルなどを取得できます。",
+    "apps": [
+      { "img": "apps/eval_01.png", "text": "レール沿いの法線方向にパターンを配向" }
+    ]
+  },
+  {
+    "id": "Move",
+    "level": 1,
+    "title": "Move コンポーネントの機能は？",
+    "img": "assets/move.png",
+    "correct": "ジオメトリをベクトル分だけ移動",
+    "choices": [
+      "ジオメトリをベクトル分だけ移動",
+      "平面を生成",
+      "値を昇順に並べる",
+      "法線ベクトルを計算"
+    ],
+    "explain": "入力ジオメトリを指定ベクトルだけ平行移動します。",
+    "apps": [
+      { "img": "apps/move_01.png", "text": "最小構成のレイアウト操作（配列の基礎）" }
+    ]
+  },
+  {
+    "id": "Scale",
+    "level": 2,
+    "title": "Scale コンポーネントの役割は？",
+    "img": "assets/scale.png",
+    "correct": "ジオメトリを基点から拡縮",
+    "choices": [
+      "ジオメトリを基点から拡縮",
+      "ドメインを再構築",
+      "面積を計算",
+      "テキストを出力"
+    ],
+    "explain": "指定スケール係数でジオメトリを拡大・縮小します（基点に注意）。",
+    "apps": [
+      { "img": "apps/scale_01.png", "text": "Graph Mapper と連動させた徐変スケーリング" }
+    ]
+  }
+]
